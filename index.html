@@ -271,33 +271,36 @@
           </div> -->
 
           <!-- Initial Form -->
-          <form name="contact" method="POST" data-netlify="true">
-          <div class="form-group">
-            <div class="input-group input-group-lg mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text bg-danger"><i class="fas fa-user text-white"></i></span>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <p class="hidden">
+              <label>Don’t fill this out if you're human: <input name="bot-field"/></label>
+            </p>
+            <div class="form-group">
+              <div class="input-group input-group-lg my-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-danger"><i class="fas fa-user text-white"></i></span>
+                </div>
+                <input type="text" name="name" class="form-control bg-black-faded" placeholder="Name" />
               </div>
-              <input type="text" name="name" class="form-control bg-black-faded" placeholder="Name">
             </div>
-          </div>
-          <div class="form-group">
-            <div class="input-group input-group-lg mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text bg-danger"><i class="fas fa-envelope text-white"></i></span>
+            <div class="form-group">
+              <div class="input-group input-group-lg mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-danger"><i class="fas fa-envelope text-white"></i></span>
+                </div>
+                <input type="text" name="email" class="form-control bg-black-faded" placeholder="Email" />
               </div>
-              <input type="text" name="email" class="form-control bg-black-faded" placeholder="Email">
             </div>
-          </div>
-          <div class="form-group">
-            <div class="input-group input-group-lg mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text bg-danger"><i class="fas fa-pencil-alt text-white"></i></span>
+            <div class="form-group">
+              <div class="input-group input-group-lg mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-danger"><i class="fas fa-pencil-alt text-white"></i></span>
+                </div>
+                <textarea name="message" class="form-control bg-black-faded" cols="30" rows="10" placeholder="Message"></textarea>
               </div>
-              <textarea name="message" class="form-control bg-black-faded" cols="30" rows="10" placeholder="Message"></textarea>
             </div>
-          </div>
-          <button type="submit" class="btn bg-danger btn-block btn-lg text-white">Submit</button>
-        </form>
+            <button type="submit" class="btn bg-danger btn-block btn-lg text-white">Submit</button>
+          </form>
         </div>
       </section>
 
